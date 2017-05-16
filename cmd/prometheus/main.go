@@ -139,12 +139,13 @@ func Main() int {
 	cfg.web.Notifier = notifier
 
 	cfg.web.Version = &web.PrometheusVersion{
-		Version:   version.Version,
-		Revision:  version.Revision,
-		Branch:    version.Branch,
-		BuildUser: version.BuildUser,
-		BuildDate: version.BuildDate,
-		GoVersion: version.GoVersion,
+		Version:    version.Version,
+		Revision:   version.Revision,
+		Branch:     version.Branch,
+		BuildUser:  version.BuildUser,
+		BuildDate:  version.BuildDate,
+		GoVersion:  version.GoVersion,
+		GoMaxProcs: version.GoMaxProcs,
 	}
 
 	cfg.web.Flags = map[string]string{}

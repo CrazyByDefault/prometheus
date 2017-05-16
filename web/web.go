@@ -95,12 +95,13 @@ func (h *Handler) ApplyConfig(conf *config.Config) error {
 
 // PrometheusVersion contains build information about Prometheus.
 type PrometheusVersion struct {
-	Version   string `json:"version"`
-	Revision  string `json:"revision"`
-	Branch    string `json:"branch"`
-	BuildUser string `json:"buildUser"`
-	BuildDate string `json:"buildDate"`
-	GoVersion string `json:"goVersion"`
+	Version    string `json:"version"`
+	Revision   string `json:"revision"`
+	Branch     string `json:"branch"`
+	BuildUser  string `json:"buildUser"`
+	BuildDate  string `json:"buildDate"`
+	GoVersion  string `json:"goVersion"`
+	GoMaxProcs string `json:"goMaxProcs"`
 }
 
 // Options for the web Handler.

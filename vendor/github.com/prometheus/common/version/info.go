@@ -20,17 +20,20 @@ import (
 	"strings"
 	"text/template"
 
+	"strconv"
+
 	"github.com/prometheus/client_golang/prometheus"
 )
 
 // Build information. Populated at build-time.
 var (
-	Version   string
-	Revision  string
-	Branch    string
-	BuildUser string
-	BuildDate string
-	GoVersion = runtime.Version()
+	Version    string
+	Revision   string
+	Branch     string
+	BuildUser  string
+	BuildDate  string
+	GoVersion  = runtime.Version()
+	GoMaxProcs = strconv.Itoa(runtime.GOMAXPROCS(-1))
 )
 
 // NewCollector returns a collector which exports metrics about current version information.
